@@ -19,6 +19,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -101,20 +102,24 @@ function LoginPage() {
                       className="btn-round"
                       color="info"
                       href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      to="/profile-page"
+                      //onClick={(e) => e.preventDefault()}
                       size="lg"
+                      tag={Link}
                     >
                       Get Started
                     </Button>
                     <div className="pull-left">
                       <h6>
-                        <a
-                          className="link"
+                        <Button
+                          className="btn-neutral btn-round"
                           href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          to="/signup"
+                          //onClick={(e) => e.preventDefault()}
+                          tag={Link}
                         >
                           Create Account
-                        </a>
+                        </Button>
                       </h6>
                     </div>
                     <div className="pull-right">

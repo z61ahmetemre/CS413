@@ -28,7 +28,7 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
-import LandingPage from "views/examples/LandingPage.js";
+import SignUp from "views/index-sections/SignUp.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 
 ReactDOM.render(
@@ -41,8 +41,8 @@ ReactDOM.render(
           render={(props) => <NucleoIcons {...props} />}
         />
         <Route
-          path="/landing-page"
-          render={(props) => <LandingPage {...props} />}
+          path="/signup"
+          render={(props) => <SignUp {...props} />}
         />
         <Route
           path="/profile-page"
