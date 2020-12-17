@@ -3,6 +3,10 @@ import React from "react";
 // reactstrap components
 import {
   Button,
+  CardBody,
+  Card,
+  CardText,
+  CardTitle,
   NavItem,
   NavLink,
   Nav,
@@ -18,9 +22,11 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import SignUp from "views/index-sections/SignUp";
 
 function ProfilePage() {
   const [pills, setPills] = React.useState("2");
+  const [iconTabs, setIconTabs] = React.useState("1");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
     document.body.classList.add("sidebar-collapse");
@@ -39,33 +45,6 @@ function ProfilePage() {
         <ProfilePageHeader />
         <div className="section">
           <Container>
-            <div className="button-container">
-              <Button className="btn-round" color="info" size="lg">
-                Follow
-              </Button>
-              <Button
-                className="btn-round btn-icon"
-                color="default"
-                id="tooltip515203352"
-                size="lg"
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <UncontrolledTooltip delay={0} target="tooltip515203352">
-                Follow me on Twitter
-              </UncontrolledTooltip>
-              <Button
-                className="btn-round btn-icon"
-                color="default"
-                id="tooltip340339231"
-                size="lg"
-              >
-                <i className="fab fa-instagram"></i>
-              </Button>
-              <UncontrolledTooltip delay={0} target="tooltip340339231">
-                Follow me on Instagram
-              </UncontrolledTooltip>
-            </div>
             <h3 className="title">About me</h3>
             <h5 className="description">
               An artist of considerable range, Ryan — the name taken by
@@ -74,145 +53,217 @@ function ProfilePage() {
               with a solid groove structure. An artist of considerable range.
             </h5>
             <Row>
-              <Col className="ml-auto mr-auto" md="6">
-                <h4 className="title text-center">My Portfolio</h4>
+              <Col className="ml-auto mr-auto" md="12">
                 <div className="nav-align-center">
-                  <Nav
-                    className="nav-pills-info nav-pills-just-icons"
-                    pills
-                    role="tablist"
-                  >
-                    <NavItem>
-                      <NavLink
-                        className={pills === "1" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                      >
-                        <i className="now-ui-icons design_image"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "2" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("2");
-                        }}
-                      >
-                        <i className="now-ui-icons location_world"></i>
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "3" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("3");
-                        }}
-                      >
-                        <i className="now-ui-icons sport_user-run"></i>
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
+                <Nav className="justify-content-center" role="tablist" tabs>
+            <NavItem>
+              <NavLink
+                className={iconTabs === "1" ? "active" : ""}
+                href="#pablo"
+                onClick={e => {
+                  e.preventDefault();
+                  setIconTabs("1");
+                }}
+              >
+                Job Search
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={iconTabs === "2" ? "active" : ""}
+                href="#pablo"
+                onClick={e => {
+                  e.preventDefault();
+                  setIconTabs("2");
+                }}
+              >
+                Search Employee
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={iconTabs === "3" ? "active" : ""}
+                href="#pablo"
+                onClick={e => {
+                  e.preventDefault();
+                  setIconTabs("3");
+                }}
+              >
+                Messages
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={iconTabs === "4" ? "active" : ""}
+                href="#pablo"
+                onClick={e => {
+                  e.preventDefault();
+                  setIconTabs("4");
+                }}
+              >
+                About
+              </NavLink>
+            </NavItem>
+          </Nav>
+          <CardBody>
+          <TabContent
+            className="text-center"
+            activeTab={"iconTabs" + iconTabs}
+          >
+            <TabPane tabId="iconTabs1">
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Full-Stack Developer</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Apply
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Sales Manager</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Apply
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> UI/UX Designer</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Apply
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Backend Developer</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Apply
+                    </Button>
+                  </CardBody>
+                </Card>
+            </TabPane>
+            <TabPane tabId="iconTabs2">
+            <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Backend Developer</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Offer
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Project Manager</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Offer
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Senior Engineer</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Offer
+                    </Button>
+                  </CardBody>
+                </Card>
+                <Card>
+                  <CardBody>
+                    <CardTitle tag="h4"> Data Analyst</CardTitle>
+                    <CardText> 
+                      Some quick example text to build on the card title and make up the
+                      bulk of the card's content.
+                    </CardText>
+                    <Button 
+                      color="primary"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      Offer
+                    </Button>
+                  </CardBody>
+                </Card>
+            </TabPane>
+            <TabPane tabId="iconTabs3">
+              <p>
+               <h4>Under development</h4>
+              </p>
+            </TabPane>
+            <TabPane tabId="iconTabs4">
+              <div>
+                <h4> User name: </h4>
+                <p id="userName">Ahmet Emre Zengin</p>
+                <h4> Occupation: </h4>
+                <p id="occupation"></p>
+                <h4> City: </h4>
+                <p id="city"></p>
+                <h4> Account Type: </h4>
+                <p id="accountType"></p>
+              </div>
+
+            </TabPane>
+          </TabContent>
+        </CardBody>
                 </div>
               </Col>
-              <TabContent className="gallery" activeTab={"pills" + pills}>
-                <TabPane tabId="pills1">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg1.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills2">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg11.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills3">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-              </TabContent>
             </Row>
           </Container>
         </div>

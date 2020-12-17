@@ -39,12 +39,11 @@ function IndexHeader() {
               className="n-logo"
               src={require("assets/img/now-logo.png")}
             ></img>
-            <h1 className="h1-seo">Now UI Kit.</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+            <h1 className="h1-seo">Project HERA</h1>
           </div>
           <h6 className="category category-absolute">
             Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
+            <a >
               <img
                 alt="..."
                 className="invision-logo"
@@ -53,8 +52,7 @@ function IndexHeader() {
             </a>
             . Coded by{" "}
             <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
+              
             >
               <img
                 alt="..."
