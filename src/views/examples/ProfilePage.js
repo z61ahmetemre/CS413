@@ -250,13 +250,13 @@ function ProfilePage() {
             <TabPane tabId="iconTabs4">
               <div>
                 <h4> User name: </h4>
-                <p id="userName">Ahmet Emre Zengin</p>
+                <p id="userName">Emre Yılmaz</p>
                 <h4> Occupation: </h4>
-                <p id="occupation"></p>
+                <p id="occupation">Student</p>
                 <h4> City: </h4>
-                <p id="city"></p>
+                <p id="city">Ankara</p>
                 <h4> Account Type: </h4>
-                <p id="accountType"></p>
+                <p id="accountType">Job Seeker</p>
               </div>
 
             </TabPane>

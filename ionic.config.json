@@ -1,0 +1,7 @@
+{
+    "name": "HERA",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

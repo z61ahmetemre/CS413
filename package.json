@@ -3,6 +3,8 @@
   "version": "1.4.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^2.4.5",
+    "@capacitor/core": "^2.4.5",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "moment": "2.26.0",
@@ -44,5 +46,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.9.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "2.4.5"
   }
 }

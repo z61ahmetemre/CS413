@@ -38,8 +38,8 @@ function ProfilePageHeader() {
           <div className="photo-container">
             <img alt="..." src={require("assets/img/ryan.jpg")}></img>
           </div>
-          <h3 className="title" id="userNameBottomPicture"></h3>
-          <p className="category" id="accountTypeBottomPicture"></p>
+          <h3 className="title" id="userNameBottomPicture">Emre Yılmaz</h3>
+          <p className="category" id="accountTypeBottomPicture">Job Seeker</p>
         </Container>
       </div>
     </>
